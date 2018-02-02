@@ -1,1 +1,0 @@
-Welcome to Ruben Vasquez CST 336 Home Page!

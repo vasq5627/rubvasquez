@@ -1,0 +1,57 @@
+body {
+    background-color:#669999;
+    color: black;
+}
+header, main, nav, footer {
+    text-align: center;
+}
+nav a {
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration:none;
+    color: black;
+    
+}
+nav a:hover{
+    border-bottom: 19px green;
+    transition: .8s;
+    font-size: 20px;
+    
+}
+
+figure, div { 
+    float:center;
+}
+
+#myPicture, #welcomeText{
+    float:center;
+}
+table {
+    margin:0px auto;
+}
+td {
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+td strong {
+    color: black;
+}
+#table-header {
+    background-color: #336699;
+}
+.table-row {
+    background-color: #336699;
+}
+ul {
+    text-align:center;
+    padding-left: 15px;
+}
+.hobby {
+    color: black;
+    float:left;
+}
+
+footer {
+    clear:left;
+}
