@@ -44,12 +44,12 @@ td strong {
     background-color: black;
 }
 ul {
-    text-align:center;
+    text-align:right;
     padding-left: 15px;
 }
 .hobby {
-    color: orange;
-    float: left;
+    color: white;
+    float: right;
 }
 
 footer {
