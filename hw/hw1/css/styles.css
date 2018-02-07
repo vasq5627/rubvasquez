@@ -1,11 +1,39 @@
-body{
-   
-   background-image: url("source.gif");
-   color:red;
-}
+
+body {
+   background:black;
+   color:white;
+ }
+ 
 header, main, nav, footer {
-    text-align: center;
+    text-align:center ;
 }
+
+p {
+    font-family: "Times New Roman", Times;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 nav a {
     padding:15px;
      padding-bottom:4px;
@@ -13,8 +41,58 @@ nav a {
     text-decoration:none;
     color: white;
 }
-nav a: hover {
-    border-bottom:2px orange solid;
+nav a:hover {
+    border-bottom:2px solid black;
     font-size: 2em;
     transition: .9s;
+    
 }
+ul {
+    text-align:center;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.hackerType {
+    color: white;
+   text-align:center;
+}
+
+
+a:link {
+    color: blue;
+}
+
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: orange;
+}
+table {
+    margin:0px auto;
+}
+td {
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+td strong {
+    color:white;
+}
+#table-header {
+    background-color: black;
+}
+.table-row {
+    background-color: black;
+}
+footer {
+    clear: left;
+}
+
+
