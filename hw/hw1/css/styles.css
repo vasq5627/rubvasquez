@@ -11,29 +11,13 @@ header, main, nav, footer {
 p {
     font-family: "Times New Roman", Times;
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; 
+img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
 }
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
+a[target="_blank"] { 
     background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
- 
-    position: absolute;
-    z-index: 1;
 }
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
 nav a {
     padding:15px;
      padding-bottom:4px;
@@ -73,8 +57,9 @@ a:hover {
 }
 
 a:active {
-    color: orange;
+    color: blue;
 }
+
 table {
     margin:0px auto;
 }
