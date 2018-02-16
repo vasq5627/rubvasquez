@@ -1,0 +1,72 @@
+[12-Feb-2018 22:56:52 UTC] PHP Fatal error:  Call to undefined function displayCard() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 14
+[12-Feb-2018 22:56:52 UTC] PHP Stack trace:
+[12-Feb-2018 22:56:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 22:59:53 UTC] PHP Fatal error:  Call to undefined function displayCard() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 14
+[12-Feb-2018 22:59:53 UTC] PHP Stack trace:
+[12-Feb-2018 22:59:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:01:47 UTC] PHP Fatal error:  Call to undefined function displayCard() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 14
+[12-Feb-2018 23:01:47 UTC] PHP Stack trace:
+[12-Feb-2018 23:01:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:01:53 UTC] PHP Fatal error:  Call to undefined function displayCard() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 14
+[12-Feb-2018 23:01:53 UTC] PHP Stack trace:
+[12-Feb-2018 23:01:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:03:48 UTC] PHP Fatal error:  Call to undefined function displayCard() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 14
+[12-Feb-2018 23:03:48 UTC] PHP Stack trace:
+[12-Feb-2018 23:03:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:13:03 UTC] PHP Fatal error:  Call to undefined function displayCards() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 35
+[12-Feb-2018 23:13:03 UTC] PHP Stack trace:
+[12-Feb-2018 23:13:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:13:44 UTC] PHP Fatal error:  Call to undefined function displayCards() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 35
+[12-Feb-2018 23:13:44 UTC] PHP Stack trace:
+[12-Feb-2018 23:13:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:13 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:13 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:14 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:14 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:15 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:15 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:15 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:15 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:15 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:15 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:15 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:15 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:16 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:16 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:16 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:16 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:16 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:16 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:16 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:16 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:16 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:16 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:17 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:17 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:17 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:17 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:17 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:17 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:17 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:17 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:18 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:18 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[12-Feb-2018 23:15:18 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
+[12-Feb-2018 23:15:18 UTC] PHP Stack trace:
+[12-Feb-2018 23:15:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
