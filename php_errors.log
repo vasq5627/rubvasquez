@@ -70,3 +70,4 @@
 [12-Feb-2018 23:15:18 UTC] PHP Fatal error:  Call to undefined function coutn() in /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php on line 33
 [12-Feb-2018 23:15:18 UTC] PHP Stack trace:
 [12-Feb-2018 23:15:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Practice/php_arrays.php:0
+[19-Feb-2018 22:35:27 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/rubvasquez/Practice/setSession.php on line 5

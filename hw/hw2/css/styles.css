@@ -1,0 +1,64 @@
+body{
+    background-color:#669999;
+    color:black;
+}
+#text {
+    text-align: center;
+}
+
+#main{
+        background-image:url("../img/greenfield.jpg");
+        width:600px;
+        height:500px;
+        position:relative;
+        margin:0 auto;
+}
+#icon1, #icon2 {
+     top:248px;
+       position:absolute; 
+     
+}
+#icon1{
+    left:145px;
+}
+#icon2{
+    left:252px;
+}
+ input {
+        top:75px;
+        left:530px;
+        position:center;
+        font-size:1.3em;
+        background-color: Transparent;
+        border:none;
+        outline:none; 
+        font-weight:bold;
+        color:black;
+        cursor:pointer;
+        
+    
+    }
+input:hover {
+    border-bottom: 2px white;
+    transition: .9s;
+    font-size: 2em;
+    
+}
+    
+    #output{
+     width:600px;   
+     margin:0 auto;
+     position:absolute;
+     text-align:center;
+     top:450px;
+     font-size:1.5em;
+     line-height: .7em;
+    }
+    
+    footer{
+        font-family: "Times New Roman", Georgia, Serif;
+        font-size:.12em;
+        width:600px;
+        margin:0 auto;
+        padding-top:10px;
+    }

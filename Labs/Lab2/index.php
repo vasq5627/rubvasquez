@@ -17,7 +17,7 @@
            play();
          ?>
      <form>
-         <input type="submit" value="Spin" />
+         <input type="submit" value="Spin" DOCTYPE/>
      </form>
      </div>
      <br />
