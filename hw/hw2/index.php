@@ -31,6 +31,9 @@
             <strong> Disclaimer: </strong>
             The information in this website is fictitous. It's used for academic purposes.
             <a href="http://csumb.edu">CSUMB</a>
+            <figure>
+                <img src="img/Monterey.jpg" alt="School Logo" height="100" width="150" />
+            </figure>
             
             
         </footer>

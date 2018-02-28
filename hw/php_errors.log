@@ -317,3 +317,6 @@
 [21-Feb-2018 17:36:37 UTC] PHP   2. generate() /home/ubuntu/workspace/rubvasquez/hw/hw2/index.php:17
 [21-Feb-2018 17:36:37 UTC] PHP   3. displayIcon() /home/ubuntu/workspace/rubvasquez/hw/hw2/inc/functions.php:5
 [21-Feb-2018 17:36:37 UTC] PHP   4. array_diff() /home/ubuntu/workspace/rubvasquez/hw/hw2/inc/functions.php:12
+[21-Feb-2018 22:03:55 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/rubvasquez/hw/hw2/inc/functions.php on line 48
+[21-Feb-2018 22:03:55 UTC] PHP Stack trace:
+[21-Feb-2018 22:03:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/hw/hw2/index.php:0

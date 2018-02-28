@@ -1,7 +1,10 @@
 body{
     background-color:#669999;
     color:black;
+    background-image:url("img/yosemite.jpeg");
 }
+
+
 #text {
     text-align: center;
 }
@@ -44,6 +47,7 @@ input:hover {
     font-size: 2em;
     
 }
+
     
     #output{
      width:600px;   
