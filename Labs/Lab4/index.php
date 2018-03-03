@@ -6,7 +6,8 @@
       echo "<h3>You searched for " . $_GET['keyword'] . "</h3>";
       $orientation = "horizontal";
       $keyword = $_GET['keyword'];
-      if (isset($_GET['layout'])) {  //user checked a layout
+      if (isset($_GET['layout'])) 
+        {  //user checked a layout
         $orientation = $_GET['layout'];
       }
       if (!empty($_GET['category'])) { //user selected a category
