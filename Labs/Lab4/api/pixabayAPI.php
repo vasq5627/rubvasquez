@@ -4,7 +4,7 @@
 function getImageURLs($keyword, $orientation="horizontal") {
     $curl = curl_init();
     curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=$keyword&image_type=photo&orientation=$orientation&safesearch=true&per_page=100",
+      CURLOPT_URL => "https://pixabay.com/api/?key=8098347-e6f5560a6b54364771b577d9a&q=$keyword&image_type=photo&orientation=$orientation&safesearch=true&per_page=100",
       //8098347-e6f5560a6b54364771b577d9a
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_TIMEOUT => 30,

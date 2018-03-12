@@ -5,33 +5,30 @@
   $backgroundImage = "img/sea.jpg";
     
   if (isset($_GET['keyword'])) { //if form was submitted
-      
       include 'api/pixabayAPI.php';
-      
       echo "<h3>You searched for " . $_GET['keyword'] . "</h3>";
-      
       $orientation = "horizontal";
       $keyword = $_GET['keyword'];
-      
       if (isset($_GET['layout'])) {  //user checked a layout
-        
         $orientation = $_GET['layout'];
-        
       }
-      
       if (!empty($_GET['category'])) { //user selected a category
         $keyword = $_GET['category'];
       }
-      
+   
+  
       $imageURLs = getImageURLs($keyword, $orientation);
       
       //$backgroundImage = $imageURLs[rand(0, count($imageURLs)-1];
       $backgroundImage = $imageURLs[array_rand($imageURLs)];
       
+
+      
       //print_r($imageURLs);
       
       
-  }      
+  }
+  
  
  function checkCategory($category){
    
@@ -39,6 +36,13 @@
        echo " selected";
     }
  }
+ 
+function validate($category, $keyword){
+  if ( empty($_POST['keyword , category']) ) {
+  echo "You didn't enter your name!!!";
+    
+  } 
+}
 
 ?>
 
@@ -68,14 +72,14 @@
         
               echo "<h2> You must type a keyword or select a category </h2>";
             
-            }  
+            } 
         ?>
 
         
 
         <form method="GET">
             
-            <input type="text" name="keyword" placeholder="Keyword to search for" value="<?=$_GET['keyword']?>"/>
+            <input type="text" size="20" name="keyword" placeholder="Keyword to search for" value="<?=$_GET['keyword']?>"/>
             
             <input type="radio" name="layout" value="horizontal" id="hlayout"> 
             
@@ -83,23 +87,21 @@
                if ($_GET['layout'] == "horizontal") {
                  echo "checked";
                }
-                
             ?>
             
-            />
-            <label for="hlayout"></label>Horizontal </label>
+            
+            <label for="hlayout"> Horizontal </label>
             
             <input type="radio" name="layout" value="vertical" id="vlayout" <?= ($_GET['layout']=="vertical")?"checked":"" ?>>
-            <label for="vertical">Vertical </label>
+            <label for="vlayout"> Vertical </label>
             
             <select name="category">
               <option value="" >  Select One </option> 
               <option value="sea" <?=checkCategory('sea')?>>  Ocean </option>
-              <option value="forest" <?=checkCategory('Forest')?>>  Forest </option>
-              <option value="sky"<?=checkCategory('Sky')?>>  Sky </option>
-               <option value="city" <?=checkCategory('City')?>>  City </option>
-               <option value="snow" <?=checkCategory('Snow')?>>  Snow </option>
-               
+              <option <?=checkCategory('Forest')?>>  Forest </option>
+              <option <?=checkCategory('Sky')?>>  Sky </option>
+              <option <?=checkCategory('City')?>>  City </option>
+              <option <?=checkCategory('Snow')?>>  Snow </option>
             </select>
             
             
@@ -160,7 +162,6 @@
         
         <?php
             }//endIf
-           
         ?>
         
         
