@@ -1,0 +1,29 @@
+ body {
+    background-image: url(../img/ref.jpg);
+    color:black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main {
+    width: 800px;
+    background-color: white;
+    opacity: .9;
+    color: black;
+    text-align: center;
+    height:100;
+    border: 1px solid green;
+    border-radius: 2px;
+    margin: auto;
+    top: 100px;
+}
+p{
+      font-family: "Times New Roman", Times, serif;
+}
+#formOne, #formTwo{
+    text-align:center;
+     font-family: "Times New Roman", Times, serif;
+}
+footer {
+    
+    text-color:white;
+}

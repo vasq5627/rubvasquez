@@ -38,8 +38,8 @@
  }
  
 function validate($category, $keyword){
-  if ( empty($_POST['keyword , category']) ) {
-  echo "You didn't enter your name!!!";
+  if ( empty($_POST['keyword']) ) {
+  echo "Error!!!";
     
   } 
 }
