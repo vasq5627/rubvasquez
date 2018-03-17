@@ -1,21 +1,26 @@
 <?php
 
-$nameErr  = $genderErr  = "";
-$name = $gender =  "";
+$nameError  = $genderError  = $classError = "";
+$name = $gender = $classError =  "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $nameErr = "ERROR = Name is required";
+    $nameError = "ERROR = Name is required";
   } else {
     $name = test_input($_POST["name"]);
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "ERROR = Only letters and white space allowed"; 
+      $nameError = "ERROR = Only letters"; 
     }
   }
   if (empty($_POST["gender"])) {
-    $genderErr = "ERROR = Gender is required";
+    $genderError = "ERROR = Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
+  }
+  if(empty($_POST["year"])){
+      $classError = "Error = Year is required";
+  } else {
+      $class = test_input($_POST["year"]);
   }
 }
 function test_input($data) {
@@ -23,6 +28,37 @@ function test_input($data) {
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
+}
+function questions(){
+    for($i=0;$i<1;$i++){
+         ${"randomQues" . $i } = rand(0,9);
+         displayData(${"randomQues" . $i}, $i );
+     }
+    }
+    function displayData($randomQues){
+switch($randomQues){
+    case 0: $question = "In the last month, how often have you been upset because of something that happened unexpectedly?";
+        break;
+    case 1: $question = "In the last month, how often have you felt that you were unable to control the important things in your life?";
+        break;
+    case 2: $question = "In the last month, how often have you felt nervous or stressed?";
+        break; 
+    case 3: $question = "In the last month, how often have you felt confident about your ability to handle your personal problems?";
+        break;
+    case 4: $question = "In the last month, how often have you felt that things were going your way?";
+        break;
+    case 5: $question = "In the last month, how often have you found that you could not cope with all the things that you had to do?";
+        break;
+    case 6: $question = "In the last month, how often have you been able to control irritations in your life?";
+        break;
+    case 7: $question = "In the last month, how often have you felt that you were on top of things?";
+        break;
+    case 8: $question = "In the last month, how often have you been angered because of things that were out of your control?";
+        break;
+    case 9: $question = "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?";
+        break;
+}
+ echo $question;
 }
 ?>
 <!DOCTYPE html>
@@ -41,10 +77,10 @@ function test_input($data) {
             <h3>Percieved Stress Scale </h3>
             <br>
    <p><span class="error">* required field.</span></p>
-<form method="post" action="recieve.php"  placeholder="Full Name" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
-<form action="recieve.php">
+<form method="post"  placeholder="Full Name" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" > 
+
   Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
+  <span class="error">* <?php echo $nameError;?></span>
   <br><br>
 
         
@@ -52,11 +88,11 @@ function test_input($data) {
    
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female"> Female <br />
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <span class="error"> <?php echo $genderErr;?></span>
+  <span class="error"> <?php echo $genderError;?></span>
   <br><br>
   <br />
   <br />
-   <p>Select your year in school</p>
+   <p>Select your year in school</p> 
     <select name="Year in School">
     <option value="Select One" selected>Select One</option>
     <option value="Freshman">Freshman</option>
@@ -79,16 +115,33 @@ function test_input($data) {
   <textarea name="message" rows="1" cols="10"></textarea>
   <br>
   <br > 
+  
+   
+   <h4>The questions in this scale ask about your feelings and thoughts. In each case, 
+   you will be asked to indicate by circling how often you felt or thought a certain way.</h4>
+   <h5>1 = Never     2 = Almost Never	3 = Sometimes	  4 = Fairly Often      5 = Very Often </h5>
 
-         <input type="submit" name="submit" value="next" oneClick=alert('Processing')>
+        <h4 id="question1" ><?= questions(); ?></h4>
+         Scale (between 1 and 5): <input type="number" name="Number" min="1" max="5">
+        <h4 id="question2"><?= questions(); ?></h4>
+        Scale (between 1 and 5): <input type="number" name="Number" min="1" max="5">
+        <h4 id="question3"><?= questions(); ?></h4>
+         Scale (between 1 and 5): <input type="number" name="Number" min="1" max="5">
+        <h3></h3>
+        <br />
+        
+        <br />
+
+         <input type="submit" name="submit" value="Submit" oneClick=alert('Processing')>
+       
          <input type="reset">
          <br />
          <br />
     </form>
-    </form>
+  
     </div>
     </body>
-     <footer id="last">
+     <footer>
             <hr>
             CST336 Internet Programming. 2018 &copy <br />
             <strong> Disclaimer: </strong>

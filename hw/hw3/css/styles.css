@@ -24,6 +24,7 @@ p{
      font-family: "Times New Roman", Times, serif;
 }
 footer {
-    
-    text-color:white;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    color:white;
 }

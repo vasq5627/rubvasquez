@@ -14,11 +14,10 @@
         <h2>The goal of this project is to build a city consisting of Schools and Buildings </h2>
         
     <div id="main">
-        <?php 
+         <?php 
         include 'inc/functions.php';
         generate();
         ?>
-        
      <form>
          <input type="submit" value=" Generate " />
      </form>
