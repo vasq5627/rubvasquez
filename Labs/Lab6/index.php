@@ -1,16 +1,15 @@
 
 <?php
 
-    include '../../dbConnections.php';
-    
-    $conn = getDatabaseConnection("ottermart");
+    include '../../dbConnection.php';
+    $dbConn = getDatabaseConnection("ottermart");
 
     function displayCategories(){
-        global $conn;
+        global $dbConn;
         
-        $sql = "SELECT catName FROM `om_category` ORDER BY catName";
+        $sql = "SELECT catId, catName FROM `om_category` ORDER BY catName";
         
-        $stmt = $conn->prepare($sql);
+        $stmt = $dbConn->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
@@ -18,14 +17,14 @@
         
         foreach ($records as $record) {
             
-            echo "<option>" . $record["catName"] . "</option>";
+            echo "<option value='".$record["catId"]."' >" . $record["catName"] . "</option>";
             
         }
         
     }
     
- function displaySearchResults(){
-        global $conn;
+    function displaySearchResults(){
+        global $dbConn;
         
         if (isset($_GET['searchForm'])) { //checks whether user has submitted the form
             
@@ -52,9 +51,9 @@
                  $namedParameters[":categoryId"] =  $_GET['category'];
             }        
             
-           // echo $sql; //for debugging purposes
+            //echo $sql; //for debugging purposes
             
-             $stmt = $conn->prepare($sql);
+             $stmt = $dbConn->prepare($sql);
              $stmt->execute($namedParameters);
              $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
