@@ -1,0 +1,17 @@
+body {
+    color:black;
+    background-color:white;
+    text-align:center;
+    background-image: url(../img/ref.jpg);
+}
+div {
+    width: 800px;
+    background-color: white;
+    opacity: .9;
+    color: black;
+    text-align: center;
+    height:100;
+    border-radius: 2px;
+    margin: auto;
+    top: 100px;
+}

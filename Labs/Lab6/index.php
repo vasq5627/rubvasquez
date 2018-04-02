@@ -1,113 +1,140 @@
+ 
+ <?php
+ function getDatabaseConnection($dbName) {
 
-<?php
-
-    include '../../dbConnection.php';
-    $dbConn = getDatabaseConnection("ottermart");
-
-    function displayCategories(){
-        global $dbConn;
-        
-        $sql = "SELECT catId, catName FROM `om_category` ORDER BY catName";
-        
-        $stmt = $dbConn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-        //print_r($records);
-        
-        foreach ($records as $record) {
-            
-            echo "<option value='".$record["catId"]."' >" . $record["catName"] . "</option>";
-            
+         $host = "localhost";
+         $dbname = $dbName;
+         $username = "root";
+         $password = "";
+         
+         //checks whether the URL contains "herokuapp" (using Heroku)
+         if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+            $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+            $host = $url["host"];
+            $dbname = substr($url["path"], 1);
+            $username = $url["user"];
+            $password = $url["pass"];
         }
-        
+         
+         $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+         $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+     
+     return $dbConn;
+     
     }
-    
-    function displaySearchResults(){
-        global $dbConn;
-        
-        if (isset($_GET['searchForm'])) { //checks whether user has submitted the form
-            
-            echo "<h3>Products Found: </h3>"; 
-            
-            //following sql works but it DOES NOT prevent SQL Injection
-            //$sql = "SELECT * FROM om_product WHERE 1
-            //       AND productName LIKE '%".$_GET['product']."%'";
-            
-            //Query below prevents SQL Injection
-            
-            $namedParameters = array();
-            
-            $sql = "SELECT * FROM om_product WHERE 1";
-            
-            if (!empty($_GET['product'])) { //checks whether user has typed something in the "Product" text box
-                 $sql .=  " AND productName LIKE :productName";
-                 $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
-            }
-                  
-                  
-             if (!empty($_GET['category'])) { //checks whether user has typed something in the "Product" text box
-                 $sql .=  " AND catId = :categoryId";
-                 $namedParameters[":categoryId"] =  $_GET['category'];
-            }        
-            
-            //echo $sql; //for debugging purposes
-            
-             $stmt = $dbConn->prepare($sql);
-             $stmt->execute($namedParameters);
-             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-            foreach ($records as $record) {
-            
-                 echo  $record["productName"] . " " . $record["productDescription"] . "<br />";
-            
-            }
-        }
-        
-    }
+     
+     $dbConn = getDatabaseConnection("ottermart");
 
     
-?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> OtterMart Product Search </title>
-    </head>
-    <body>
-
-        <h1>  OtterMart Product Search </h1>
-        
-        <form>
-            
-            Product: <input type="text" name="product" /><br />
-            
-            Category: 
-                <select name="category">
-                    <option value=""> Select One </option>
-                    <?=displayCategories()?>
-                </select>
-            <br />
-            
-            Price:  From <input type="text" name="priceFrom" size="7"/>
-                    To   <input type="text" name="priceTo" size="7"/>
-                    
-            <br />
-            
-             Order result by:<br />
+     function displayCategories(){
+         global $dbConn;
+         
+         $sql = "SELECT catId, catName FROM `om_category` ORDER BY catName";
+         
+         $stmt = $dbConn->prepare($sql);
+         $stmt->execute();
+         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         
+         //print_r($records);
+         
+         foreach ($records as $record) {
              
-             <input type="radio" name="orderBy" value="price"/> Price <br />
-             <input type="radio" name="orderBy" value="name"/> Name
+             echo "<option value='".$record["catId"]."' >" . $record["catName"] . "</option>";
              
+         }
+         
+     }
+     
+     function displaySearchResults(){
+         global $dbConn;
+         
+         if (isset($_GET['searchForm'])) { //checks whether user has submitted the form
+             
+             echo "<h3>Products Found: </h3>"; 
+             
+             //following sql works but it DOES NOT prevent SQL Injection
+             //$sql = "SELECT * FROM om_product WHERE 1
+             //       AND productName LIKE '%".$_GET['product']."%'";
+             
+             //Query below prevents SQL Injection
+             
+             $namedParameters = array();
+             
+             $sql = "SELECT * FROM om_product WHERE 1";
+             
+             if (!empty($_GET['product'])) { //checks whether user has typed something in the "Product" text box
+                  $sql .=  " AND productName LIKE :productName";
+                  $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
+             }
+                   
+                   
+              if (!empty($_GET['category'])) { //checks whether user has typed something in the "Product" text box
+                  $sql .=  " AND catId = :categoryId";
+                  $namedParameters[":categoryId"] =  $_GET['category'];
+             }        
+             
+             //echo $sql; //for debugging purposes
+             
+              $stmt = $dbConn->prepare($sql);
+              $stmt->execute($namedParameters);
+              $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         
+             foreach ($records as $record) {
+             
+                  echo  $record["productName"] . " " . $record["productDescription"] . "<br />";
+             
+             }
+         }
+         
+     }
+ 
+     
+ ?>
+ 
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title> OtterMart Product Search </title>
+     <style>
+     @import url("css/styles.css");
+     </style>
+     </head>
+     <body>
+ 
+         <h1>  OtterMart Product Search </h1>
+         
+         <form>
+              
+             Product: <input type="text" name="product" /><br />
+             
+             Category: 
+                 <select name="category">
+                     <option value=""> Select One </option>
+                    <?=displayCategories()?> 
+                 </select>
              <br />
-             <input type="submit" value="Search" name="searchForm" />
              
-        </form>
+             Price:  From <input type="text" name="priceFrom" size="7"/>
+                     To   <input type="text" name="priceTo" size="7"/>
+                     
+             <br />
+             
+              Order result by:<br />
+              
+              <input type="radio" name="orderBy" value="price"/> Price <br />
+              <input type="radio" name="orderBy" value="name"/> Name
+              
+              <br />
+              <input type="submit" value="Search" name="searchForm" />
+              
+         </form>
+         
+         <br />
+         <hr>
+         <div>
+          
         
-        <br />
-        <hr>
-        
-        <?= displaySearchResults() ?>
-
-    </body>
-</html>
+         <?= displaySearchResults() ?>
+    </div>
+     </body>
+ </html>
