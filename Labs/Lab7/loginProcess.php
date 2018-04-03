@@ -17,6 +17,15 @@
             FROM om_admin
             WHERE username = '$username'
             AND   password = '$password'";
+            $sql = "SELECT *
+                    FROM om_admin
+                    WHERE username = :username
+                    AND password = :password";
+                    
+        $np = array();
+        $np[":username"] = $username;
+        $np[":password"] = $password;
+                    
             
     $stmt = $conn->prepare($sql);
     $stmt->execute();
