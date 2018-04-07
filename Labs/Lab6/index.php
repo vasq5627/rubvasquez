@@ -96,7 +96,7 @@
     <head>
         <title> OtterMart Product Search </title>
         <style type="text/css">
-             @import url("css/style.css");
+             @import url("css/styles.css");
         </style>
     </head>
     <body>
@@ -131,17 +131,19 @@
         
         <br />
         <hr>
+        <div> <?= displaySearchResults() ?> 
+        </div>
+    
         
-        <?= displaySearchResults() ?>
         
          <footer>
-            CST 336. 2018&copy; Martinez<br/>
+            CST 336. 2018&copy; Vasquez<br/>
             <strong>Disclaimer:</strong> The information in this webpage is fictitious. <br/>
             <small>It is used for academic purposes only.</small>
             <br/>
             <img src="img/csumb-logo.png" alt="csumb logo photo"/>
             <br/>
-            <img id="veri" src="img/buddy_verified.png" alt="buddy check"/>
+            
         </footer>
 
     </body>
