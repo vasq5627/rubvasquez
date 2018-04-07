@@ -1268,3 +1268,50 @@ Stack trace:
 [03-Apr-2018 23:50:27 UTC] PHP Stack trace:
 [03-Apr-2018 23:50:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:0
 [03-Apr-2018 23:50:27 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:92
+[04-Apr-2018 00:00:13 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php on line 13
+[04-Apr-2018 00:00:13 UTC] PHP Stack trace:
+[04-Apr-2018 00:00:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:0
+[04-Apr-2018 00:00:13 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:92
+[04-Apr-2018 00:02:19 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php on line 13
+[04-Apr-2018 00:02:19 UTC] PHP Stack trace:
+[04-Apr-2018 00:02:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:0
+[04-Apr-2018 00:02:19 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:92
+[04-Apr-2018 00:03:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php on line 12
+[04-Apr-2018 00:03:08 UTC] PHP Stack trace:
+[04-Apr-2018 00:03:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:0
+[04-Apr-2018 00:03:08 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:91
+[04-Apr-2018 00:04:16 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php on line 12
+[04-Apr-2018 00:04:16 UTC] PHP Stack trace:
+[04-Apr-2018 00:04:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:0
+[04-Apr-2018 00:04:16 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/rubvasquez/Labs/Lab6/index.php:91
+[04-Apr-2018 21:13:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php(31): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php on line 31
+[04-Apr-2018 21:16:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php(31): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/loginProcess.php on line 31
+[04-Apr-2018 21:44:30 UTC] PHP Warning:  include(../../dbConnections.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 2
+[04-Apr-2018 21:44:30 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:44:30 UTC] PHP Warning:  include(): Failed opening '../../dbConnections.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 2
+[04-Apr-2018 21:44:30 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:44:30 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 3
+[04-Apr-2018 21:44:30 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:44:56 UTC] PHP Warning:  include(../../dbConnections.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 2
+[04-Apr-2018 21:44:56 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:44:56 UTC] PHP Warning:  include(): Failed opening '../../dbConnections.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 2
+[04-Apr-2018 21:44:56 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:44:56 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 3
+[04-Apr-2018 21:44:56 UTC] PHP Stack trace:
+[04-Apr-2018 21:44:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[04-Apr-2018 21:45:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 8
+[04-Apr-2018 21:45:22 UTC] PHP Stack trace:
+[04-Apr-2018 21:45:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0

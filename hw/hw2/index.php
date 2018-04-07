@@ -39,3 +39,12 @@
     </body>
      
 </html>
+width: 300px;
+    background-color:DodgerBlue;
+    opacity: .7;
+    color: black;
+    text-align: center;
+    height:50;
+    border-radius: 2px;
+    margin: auto;
+    top: 60px;
