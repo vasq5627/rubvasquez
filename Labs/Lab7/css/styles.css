@@ -1,0 +1,17 @@
+div, form{
+      width: 800px;
+    background-color: white;
+    opacity: .97;
+    color: black;
+    text-align: center;
+    height:150;
+    border-radius: 30px;
+    margin: auto;
+    top: 100px;
+    
+    
+}
+body{
+    background-image:url(../bix.jpg);
+}
+ 

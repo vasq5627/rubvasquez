@@ -1315,3 +1315,9 @@ Stack trace:
 [04-Apr-2018 21:45:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php on line 8
 [04-Apr-2018 21:45:22 UTC] PHP Stack trace:
 [04-Apr-2018 21:45:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/updateProduct.php:0
+[15-Apr-2018 07:55:37 UTC] PHP Fatal error:  Call to undefined function theLog() in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/index.php on line 31
+[15-Apr-2018 07:55:37 UTC] PHP Stack trace:
+[15-Apr-2018 07:55:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/index.php:0
+[15-Apr-2018 07:56:13 UTC] PHP Fatal error:  Call to undefined function theLog() in /home/ubuntu/workspace/rubvasquez/Labs/Lab7/index.php on line 31
+[15-Apr-2018 07:56:13 UTC] PHP Stack trace:
+[15-Apr-2018 07:56:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab7/index.php:0

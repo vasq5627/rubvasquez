@@ -72,10 +72,15 @@
 <html>
     <head>
         <title>Update Product </title>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
         <h1>Update Product</h1>
+        <style>
+         @import url("css/styles.css");
+         </style>
         
         <form>
             <input type="hidden" name="productId" value= "<?=$product['productId']?>"/>
@@ -88,7 +93,7 @@
                 <?php getCategories( $product['catId'] ); ?>
             </select> <br />
             Set Image Url: <input type = "text" name = "productImage" value = "<?=$product['productImage']?>"><br>
-            <input type="submit" name="updateProduct" value="Update Product">
+            <input type="submit"  class="btn btn-success" name="updateProduct" value="Update Product">
             
         </form>
     </body>
