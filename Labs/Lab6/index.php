@@ -133,7 +133,7 @@
         <hr>
         <div> <?= displaySearchResults() ?> 
         </div>
-    
+     
         
         
          <footer>

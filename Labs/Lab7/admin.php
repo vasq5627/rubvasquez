@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-if(isset($_SESSION['adminName']))
+if(!isset( $_SESSION['adminName']))
 {
-    header("Location:index.php");    
+  header("Location:index.php");
 }
 include '../../dbConnection.php';
 $conn = getDatabaseConnection("ottermart");
@@ -35,15 +35,17 @@ function displayAllProducts(){
         <h3> Welcome <?=$_SESSION['adminName']?>! </h3>
         
         <br />
-        <form action ="addProduct.php">
-            <input type ="submit" name="addProduct" value="Add Product" />
+        <form action="addProduct.php">
+            <input type="submit" name="addproduct" value="Add Product"/>
         </form>
         
+        <br />
         <strong> Products: </strong> <br />
         
         <?php $records=displayAllProducts();
             foreach($records as $record) {
-                 echo "<a href='updateProduct.php?productId=".$record['productId']."'>Update</a>";
+                echo "[<a href='updateProduct.php?productId=".$record['productId']."'>Update</a>]";
+                echo "[<a href='deleteProduct.php?productId=".$record['productId']."'>Delete</a>]";
                 echo $record['productName'];
                 echo '<br>';
             }
