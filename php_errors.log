@@ -153,3 +153,6 @@
 [28-Mar-2018 22:06:14 UTC] PHP Stack trace:
 [28-Mar-2018 22:06:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/MIDTERM/midterm.php:0
 [28-Mar-2018 22:15:40 UTC] PHP Parse error:  syntax error, unexpected '"<br />"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/ubuntu/workspace/rubvasquez/MIDTERM/midterm.php on line 23
+[19-Apr-2018 07:35:47 UTC] PHP Fatal error:  Call to undefined function displayGenre() in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php on line 54
+[19-Apr-2018 07:35:47 UTC] PHP Stack trace:
+[19-Apr-2018 07:35:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/FinalProject/index.php:0
