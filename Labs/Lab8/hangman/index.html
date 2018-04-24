@@ -10,81 +10,61 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
+    
         
-      
+   
+   
     </head>
     <body>
+
         <div class='container text-center'>
             <header>
-   <h1>Hangman</h1>
-    </header>
-
-    <div id="word"></div>
-    <div id="letters">
-        
-    </div>
-
-    <div id="man">
-   <img src="img/stick_0.png" id="hangImg">
+               <h1>Hangman</h1>
+            </header>
+            
+            <h2 id="word"></h2>
+            <div id ="hint">
+            <button id = "hint">Hint </button>
+            </div>
+            <div id="letters">
+            </div>
+            
+            <div id="man">
+               <img src="img/stick_0.png" id="hangImg">
+            </div>
+            
         </div>
-    </div> 
- 
-        <script language="javascript">
-            
-            
-            var selectedWord = "";
-            var selectedHint = "";
-            var board = []; //array
-            var remainingGuesses = 6;
-            var words = ["snake", "monkey", "bettle", "horse", "dog"];
-            var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
-                'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-            
-            
-            //console.log(words[0]);
-            
-            window.onload = startGame();
-            //$("#letterBtn").click( function(){ 
-              //  alert($("#letterBox").val() ); } );
-            //document.getElementById("letterBtn")
-            $(".letter").click(function(){
-                console.log($(this).attr("id"));
-            });
-            
-            function startGame(){
-                pickWord();
-                initboard();
-                updateBoard();
-            }
-            
-            function pickWord(){
-            var randomInt = Math.floor(Math.random() * words.length);
-            selectedWord = words[randomInt];
-            }
-            
-            function createLetters(){
-                for (var letter of alphabet){
-                    $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>"); 
-                }
-            }
-            
-            //for (var i=0; i < selectedWord.length; i++){
-              //  board.push("_");
-            //}
-            function initboard(){
-            for(var letter in selectedWord){
-                board.push("_");
-            }
-            }
-            
-          
-          function updateBoard(){
-            for(var letter of board){
-                 document.getElementById("word").innerHTML += letter + " ";
-            }
-          }
+        
+        <div id = "won">
+            <h2> You Won!</h2>
+            <button class = "replayBtn btn btn-success">Play Again</button>
+        </div>
+        <div id="lost">
+            <h2>You Lost!</h2>
+            <button class = "replayBtn btn btn-success">Play Again</button>
+        </div>
 
-        </script>
+         <h4>Words Guessed</h4>
+            <div id="guesses"></div>
+
+    <script src = "js/hangman.js">
+             
+         </script>
+         
+         <div id = "list">
+             
+             
+         </div>
+         
+         <footer>
+            CST 336. 2018&copy; Vasquez<br/>
+            <strong>Disclaimer:</strong> The information in this webpage is fictitious. <br/>
+            <small>It is used for academic purposes only.</small>
+            <br/>
+            <img src="img/csumb-logo.png" alt="csumb logo photo"/>
+            <br/>
+           
+        </footer>
+
     </body>
 </html>

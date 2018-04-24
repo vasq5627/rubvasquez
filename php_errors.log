@@ -156,3 +156,6 @@
 [19-Apr-2018 07:35:47 UTC] PHP Fatal error:  Call to undefined function displayGenre() in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php on line 54
 [19-Apr-2018 07:35:47 UTC] PHP Stack trace:
 [19-Apr-2018 07:35:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/FinalProject/index.php:0
+[24-Apr-2018 02:11:30 UTC] PHP Fatal error:  Call to undefined function displayGenre() in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php on line 23
+[24-Apr-2018 02:11:30 UTC] PHP Stack trace:
+[24-Apr-2018 02:11:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/FinalProject/index.php:0
