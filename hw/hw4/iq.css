@@ -1,0 +1,71 @@
+
+body{
+	background-image: url(canyon.jpg);
+    color:black;
+    background-color:black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+h1{
+	text-align: center;
+}
+
+#wrapper{
+	 width: 800px;
+    background-color: white;
+    opacity: .97;
+    color: black;
+    text-align: center;
+    height: 600px;
+    border-radius: 20px;
+    margin: auto;
+    top: 100px;
+   
+}
+#introScreen, #testScreen{
+	position: absolute;
+	width: 800px;
+    background-color: white;
+    opacity: .97;
+    color: black;
+    text-align: center;
+    height: 600px;
+    border-radius: 20px;
+    padding:2px;
+    margin: auto;
+    top: 100px;
+}
+#introScreen{
+	z-index:100;
+}
+
+.button {
+	 background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+	
+	
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover{
+	background-color: #4CAF50; 
+    color: white;
+}

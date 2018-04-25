@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>IQ TEST</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="iq.css">
+		<script language="javascript" type="text/javascript" src="iq.js"></script>
+		<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("button").removeClass("buttonbtn btn-primary btn-lg btn-block");
+    });
+});
+</script>
+	</head>
+	
+	<body onload="newProblem()">
+		<div id="wrapper">
+			<div id="testScreen">
+			<h1>IQ TEST</h1>
+			<h2 id="question">Question</h2>
+			<img id="graphic">
+			<div id="answer1" class="buttonbtn btn-primary btn-lg btn-block " onclick="respond(this);"></div>
+			<div id="answer2" class="buttonbtn btn-success btn-lg btn-block" onclick="respond(this);"></div>
+			<div id="answer3" class="buttonbtn btn-danger btn-lg btn-block" onclick="respond(this);"></div>
+			<div id="answer4" class="buttonbtn btn-info btn-lg btn-block" onclick="respond(this);"></div>
+		</div>
+		
+		<div id="introScreen">
+		<h4>	<p> This IQ test has 10 problems. </p>
+			<p> your score is based on the number of problems you answer correctly and the amount of time you take to complete the test. </p>
+			<p> Good Luck!</p> </h4> <br> <br>
+			<div class="buttonbtn btn-primary btn-lg" onclick="start()"> START TEST</div>
+		</div>
+			
+	
+	</div>
+
+
+	</body>
+</html>
