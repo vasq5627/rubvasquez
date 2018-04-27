@@ -94,7 +94,7 @@ used[9] = false;
 
 
 		
-$(".letter").click( function() {
+$("#button").click( function() {
                 
     newProblem($(this).attr("id"));
     
