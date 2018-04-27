@@ -21,12 +21,41 @@
             $(document).ready( function(){
                 
                 //EVENTS
+                $("#state").change( function () {
+                    //alert("hi")
+                    //alert( $("#state").val());
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
+                        dataType: "json",
+                        data: { "state": $("#state").val()},
+                        success: function(data,status) {
+                        //alert(data[0]['county']);
+                        //alert(data[0].county);
+                        $("#county").html("<option>Select One</option>");
+                        for(var i=0; i<data.length; i++)
+                        {
+                           $("#county").append("<option>" + data[i].county + "</option>"); 
+                        }
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        
+                    });//ajax
+                    
+                    
+                });
+                
                 $("#zipCode").change( function(){  
                     //alert( $("#zipCode").val() );
                     
                     $.ajax({
                         type: "GET",
-                        url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                        url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
                         dataType: "json",
                         data: { "zip": $("#zipCode").val() },
                         success: function(data,status) {
@@ -42,6 +71,7 @@
                     });//ajax
                     
                 } ); //#zipCode Event 
+
 
                 
             } ); //documentReady
@@ -69,8 +99,8 @@
                 <br>
                 Longitude:
                 <br><br>
-                State: 
-                <select>
+                State:     
+                <select id="state">
                     <option value="">Select One</option>
                     <option value="ca"> California</option>
                     <option value="ny"> New York</option>
@@ -78,7 +108,7 @@
                     <option value="va"> Virginia</option>
                 </select><br />
                 
-                Select a County: <select></select><br>
+                Select a County: <select id="county"></select><br>
                 
                 Desired Username: <input type="text"><br>
                 

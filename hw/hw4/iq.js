@@ -93,6 +93,14 @@ graphic[9] = "blank.gif";
 used[9] = false;
 
 
+		
+$(".letter").click( function() {
+                
+    newProblem($(this).attr("id"));
+    
+})
+
+
       
 function respond(){
   newProblem();
