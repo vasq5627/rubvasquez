@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>AJAX: Sign Up Page</title>
-
+        <link  href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <script>
         
@@ -17,68 +19,128 @@
         
         <script>
             
-            
-            $(document).ready( function(){
+            $(document).ready( function() {
                 
                 //EVENTS
-                $("#state").change( function () {
-                    //alert("hi")
-                    //alert( $("#state").val());
+                
+                
+                $("#username").change( function() {
                     
-                    $.ajax({
-
+                    //alert( $("#username").val());
+                    
+                     $.ajax({
+    
+                        type: "GET",
+                        url: "checkUsernameAPI.php",
+                        dataType: "json",
+                        data: { "username": $("#username").val()},
+                        success: function(data,status) {
+                            
+                            //alert(data);
+                           
+                            if(!$("#userMsg").empty()) {
+                                
+                                $("#userMsg").empty();
+                            }
+                            
+                            if(!data) {
+                                
+                                $("#userMsg").html("<span style='color:green';>Username is available!");
+                                
+                                
+                            }
+                            
+                            else {
+                                
+                                $("#userMsg").html("<span style='color:red';>Username is already taken!");
+                            }
+                            
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                     });//ajax
+                    
+                });
+                
+                $("#submit").click( function() {
+                    if ($("#password1").val() != $("#password2").val()){
+                        
+                        alert("Passwords do not match! Please retype information.");
+                    }
+                    
+                    
+                    
+                });
+                
+                $("#zipCode").change( function() {
+                
+                    //alert( $("#zipCode").val());
+                   $.ajax({
+    
+                        type: "GET",
+                        url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                        dataType: "json",
+                        data: { "zip": $("#zipCode").val()},
+                        success: function(data,status) {
+                            
+                            //alert(data.city);
+                            $("#zipMsg").empty();
+                            
+                            if(!data) {
+                                
+                                $("#zipMsg").html("<span style='color:red';>Zipcode not found!");
+                            }
+                            $("#city").html(data.city);
+                            $("#latitude").html(data.latitude);
+                            $("#longitude").html(data.longitude);
+                            
+                            
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                    });//ajax
+                    
+                });//#zipCode Event
+                
+                $("#state").change( function() {
+                   
+                   $.ajax({
+    
                         type: "GET",
                         url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
                         dataType: "json",
                         data: { "state": $("#state").val()},
                         success: function(data,status) {
-                        //alert(data[0]['county']);
-                        //alert(data[0].county);
-                        $("#county").html("<option>Select One</option>");
-                        for(var i=0; i<data.length; i++)
-                        {
-                           $("#county").append("<option>" + data[i].county + "</option>"); 
-                        }
+                            
+                            $("#county").html("<option>Select One </option>");
+                            for( var i = 0; i < data.length; i++) {
+                                
+                                 $("#county").append( "<option>" + data[i].county + "</option>");
+                            }
+                           
+                            
+                            
                         
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
                         }
-                        
+                    
                     });//ajax
                     
-                    
-                });
+                });//#state Event
                 
-                $("#zipCode").change( function(){  
-                    //alert( $("#zipCode").val() );
-                    
-                    $.ajax({
-                        type: "GET",
-                        url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
-                        dataType: "json",
-                        data: { "zip": $("#zipCode").val() },
-                        success: function(data,status) {
-                        
-                           //alert(data.city);
-                           $("#city").html(data.city);
-                        
-                        },
-                        complete: function(data,status) { //optional, used for debugging purposes
-                        //alert(status);
-                        }
-                        
-                    });//ajax
-                    
-                } ); //#zipCode Event 
-
-
                 
-            } ); //documentReady
+            });//documentReady           
             
             
         </script>
-
     </head>
 
     <body>
@@ -87,19 +149,19 @@
     
         <form onsubmit="return validateForm()">
             <fieldset>
-               <legend>Sign Up</legend>
-                First Name:  <input type="text"><br> 
-                Last Name:   <input type="text"><br> 
+               <legend></legend>
+                First Name:  <input id="firstName" type="text"><br> 
+                Last Name:   <input id="lastName" type="text"><br> 
                 Email:       <input type="text"><br> 
                 Phone Number:<input type="text"><br><br>
-                Zip Code:    <input type="text" id="zipCode"><br>
-                City:        <span id="city"></span>
+                Zip Code:    <input type="text" id="zipCode"> <span id="zipMsg"></span><br>
+                City:        <span id="city"></span> 
                 <br>
-                Latitude: 
+                Latitude:    <span id="latitude"></span>
                 <br>
-                Longitude:
+                Longitude:   <span id="longitude"></span>
                 <br><br>
-                State:     
+                State:       
                 <select id="state">
                     <option value="">Select One</option>
                     <option value="ca"> California</option>
@@ -110,13 +172,13 @@
                 
                 Select a County: <select id="county"></select><br>
                 
-                Desired Username: <input type="text"><br>
+                Desired Username: <input id="username" type="text"> <span id="userMsg" ></span><br>
                 
-                Password: <input type="password"><br>
+                Password: <input id="password1" type="password"> <br>
                 
-                Type Password Again: <input type="password"><br>
+                Type Password Again: <input id="password2" type="password"> <span id="passwordMsg" style="color:red"></span><br>
                 
-                <input type="submit" value="Sign up!">
+                <input id="submit" type="submit" value="Sign up!">
             </fieldset>
         </form>
     

@@ -159,3 +159,9 @@
 [24-Apr-2018 02:11:30 UTC] PHP Fatal error:  Call to undefined function displayGenre() in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php on line 23
 [24-Apr-2018 02:11:30 UTC] PHP Stack trace:
 [24-Apr-2018 02:11:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/FinalProject/index.php:0
+[27-Apr-2018 18:34:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'VideoGame_Store.PLATFORM' doesn't exist' in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php:44
+Stack trace:
+#0 /home/ubuntu/workspace/rubvasquez/FinalProject/index.php(44): PDOStatement->execute()
+#1 /home/ubuntu/workspace/rubvasquez/FinalProject/index.php(177): displayPlatform()
+#2 {main}
+  thrown in /home/ubuntu/workspace/rubvasquez/FinalProject/index.php on line 44
