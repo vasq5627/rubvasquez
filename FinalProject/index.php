@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+isset($_GET()){
+    
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +19,8 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
-        
+        <a href='SignIn.php'>Log-In</a>
+        <a href='SignUp.php'>Sign Up!</a>
         <form>
              <h1>  Outdoor Clothing Store  </h1>
             Product: <input type="text" name="objectName" /><br /><br />
@@ -40,6 +48,7 @@
              Order result by:<br />
              
              <input type="radio" name="orderBy" value="price"/> Price 
+             
              
              <br /><br />
              
