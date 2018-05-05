@@ -2,7 +2,7 @@
 
  include '../../dbConnection.php';
     
- $connection = getDatabaseConnection("ottermart");
+ $connection = getDatabaseConnection("");
     
  $sql = "DELETE FROM om_product WHERE productId =  " . $_GET['productId'];
  $statement = $connection->prepare($sql);

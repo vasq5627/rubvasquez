@@ -1,20 +1,19 @@
 <?php
 
     session_start();
-    include '../../dbConnection.php';
-    
-    $conn = getDatabaseConnection("Videogame_store");
+    include 'dbConnection.php';
+    $conn = getDatabaseConnection("theVideoGameStore");
     
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
     
     $sql = "SELECT * 
-            FROM om_admin
+            FROM admin
             WHERE username = '$username'
             AND   password = '$password'";
       
     $sql = "SELECT * 
-            FROM om_admin
+            FROM admin
             WHERE username = :username
             AND   password = :password";    
             
@@ -30,7 +29,7 @@
   
     if (empty($record)) {
         $_SESSION['wrong'] = "Wrong username or password.";
-        header("Location:index.php");
+        header("Location:logIn.php");
        
     } else {
         

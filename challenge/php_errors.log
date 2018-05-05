@@ -1,0 +1,33 @@
+[02-May-2018 22:19:02 UTC] PHP Warning:  include(inc/header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php on line 3
+[02-May-2018 22:19:02 UTC] PHP Stack trace:
+[02-May-2018 22:19:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:0
+[02-May-2018 22:19:02 UTC] PHP   2. include() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:17
+[02-May-2018 22:19:02 UTC] PHP Warning:  include(): Failed opening 'inc/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php on line 3
+[02-May-2018 22:19:02 UTC] PHP Stack trace:
+[02-May-2018 22:19:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:0
+[02-May-2018 22:19:02 UTC] PHP   2. include() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:17
+[02-May-2018 22:19:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'challenges'' in /home/ubuntu/workspace/rubvasquez/dbConnection.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/rubvasquez/dbConnection.php(15): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php(9): getDatabaseConnection('challenges')
+#2 /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php(18): getResponses()
+#3 {main}
+  thrown in /home/ubuntu/workspace/rubvasquez/dbConnection.php on line 15
+[02-May-2018 22:27:43 UTC] PHP Warning:  include(inc/header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php on line 3
+[02-May-2018 22:27:43 UTC] PHP Stack trace:
+[02-May-2018 22:27:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:0
+[02-May-2018 22:27:43 UTC] PHP   2. include() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:17
+[02-May-2018 22:27:43 UTC] PHP Warning:  include(): Failed opening 'inc/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php on line 3
+[02-May-2018 22:27:43 UTC] PHP Stack trace:
+[02-May-2018 22:27:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:0
+[02-May-2018 22:27:43 UTC] PHP   2. include() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:17
+[02-May-2018 22:27:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'challenges'' in /home/ubuntu/workspace/rubvasquez/dbConnection.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/rubvasquez/dbConnection.php(15): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/rubvasquez/challenge/poll/connection.php(9): getDatabaseConnection('challenges')
+#2 /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php(18): getResponses()
+#3 {main}
+  thrown in /home/ubuntu/workspace/rubvasquez/dbConnection.php on line 15
+[02-May-2018 22:29:31 UTC] PHP Fatal error:  Call to undefined function getResponses() in /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php on line 18
+[02-May-2018 22:29:31 UTC] PHP Stack trace:
+[02-May-2018 22:29:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/challenge/poll/poll.php:0

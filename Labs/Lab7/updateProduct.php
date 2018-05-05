@@ -1,7 +1,7 @@
 <?php
-    include '../../dbConnection.php';
+    include 'dbConnection.php';
     
-    $connection = getDatabaseConnection("ottermart");
+    $connection = getDatabaseConnection("theVideoGameStore");
     
     function getCategories($catId) {
     global $connection;

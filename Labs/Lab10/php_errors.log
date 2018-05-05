@@ -1,0 +1,48 @@
+[30-Apr-2018 22:19:04 UTC] PHP Warning:  include(inc/header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:19:04 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:19:04 UTC] PHP Warning:  include(): Failed opening 'inc/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:19:04 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:19:04 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:19:04 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:19:04 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:19:04 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:19:19 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:19:19 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:19:19 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:19:19 UTC] PHP Stack trace:
+[30-Apr-2018 22:19:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:20:10 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:20:10 UTC] PHP Stack trace:
+[30-Apr-2018 22:20:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:20:10 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:20:10 UTC] PHP Stack trace:
+[30-Apr-2018 22:20:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:20:38 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:20:38 UTC] PHP Stack trace:
+[30-Apr-2018 22:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:20:38 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:20:38 UTC] PHP Stack trace:
+[30-Apr-2018 22:20:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:00 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:21:00 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:00 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:21:00 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:00 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:21:00 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:10 UTC] PHP Warning:  include(../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:21:10 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:10 UTC] PHP Warning:  include(): Failed opening '../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 3
+[30-Apr-2018 22:21:10 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
+[30-Apr-2018 22:21:10 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php on line 5
+[30-Apr-2018 22:21:10 UTC] PHP Stack trace:
+[30-Apr-2018 22:21:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/rubvasquez/Labs/Lab10/api/getPetInfo.php:0
